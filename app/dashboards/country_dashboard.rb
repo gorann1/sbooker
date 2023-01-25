@@ -1,9 +1,9 @@
 require "administrate/base_dashboard"
 
-class ZoneDashboard < Administrate::BaseDashboard
+class CountryDashboard < Administrate::BaseDashboard
 
-  def display_resource(zone)
-    zone.name
+  def display_resource(country)
+    country.name
   end
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
@@ -13,9 +13,10 @@ class ZoneDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    name: Field::String,
     desc: Field::Text,
+    name: Field::String,
     slug: Field::String,
+    zone: Field::BelongsTo,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -39,6 +40,7 @@ class ZoneDashboard < Administrate::BaseDashboard
     desc
     name
     slug
+    zone
     created_at
     updated_at
   ].freeze
@@ -50,6 +52,7 @@ class ZoneDashboard < Administrate::BaseDashboard
     desc
     name
     slug
+    zone
   ].freeze
 
   # COLLECTION_FILTERS
@@ -64,10 +67,10 @@ class ZoneDashboard < Administrate::BaseDashboard
   #   }.freeze
   COLLECTION_FILTERS = {}.freeze
 
-  # Overwrite this method to customize how zones are displayed
+  # Overwrite this method to customize how countries are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(zone)
-  #   "Zone ##{zone.id}"
+  # def display_resource(country)
+  #   "Country ##{country.id}"
   # end
 end
