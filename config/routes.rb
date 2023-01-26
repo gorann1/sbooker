@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   namespace :admin do
-      resources :zones
+      resources :categories
+      resources :cities
       resources :countries
-
+      resources :depths
+      resources :regions
+      resources :types
+      resources :visibilities
+      resources :zones
       root to: "zones#index"
     end
   resources :zones
