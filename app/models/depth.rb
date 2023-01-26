@@ -1,0 +1,2 @@
+class Depth < ApplicationRecord
+end
