@@ -27,8 +27,8 @@ class CityDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     id
-    desc
     name
+    desc
     region
   ].freeze
 
@@ -48,8 +48,8 @@ class CityDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    desc
     name
+    desc
     region
     slug
   ].freeze
