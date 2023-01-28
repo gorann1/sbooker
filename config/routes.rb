@@ -8,8 +8,10 @@ Rails.application.routes.draw do
   get 'locations/index'
   namespace :admin do
       resources :categories
+      resources :centers
       resources :cities
       resources :countries
+      resources :currents
       resources :depths
       resources :regions
       resources :types
