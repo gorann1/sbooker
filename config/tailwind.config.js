@@ -9,6 +9,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+      textColor: ['active'],
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
