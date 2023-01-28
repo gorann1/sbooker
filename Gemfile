@@ -58,8 +58,12 @@ end
 
 group :development do
   gem "administrate"
+  gem 'administrate-field-enum'
+  gem 'devise'
+  gem 'letter_opener'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem 'toastr-rails'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"

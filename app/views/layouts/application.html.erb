@@ -2,61 +2,24 @@
 <html>
   <head>
     <title>Sbooker</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-    <%= stylesheet_link_tag "application.tailwind", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application.tailwind", media: 'all', "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <script
+        src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"
+        defer
+    ></script>
   </head>
   <body>
   <%= render 'partials/navbar' %>
+  <%= render 'partials/alerts' %>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>
-  <script>
-      // Burger menus
-      document.addEventListener('DOMContentLoaded', function() {
-          // open
-          const burger = document.querySelectorAll('.navbar-burger');
-          const menu = document.querySelectorAll('.navbar-menu');
 
-          if (burger.length && menu.length) {
-              for (var i = 0; i < burger.length; i++) {
-                  burger[i].addEventListener('click', function() {
-                      for (var j = 0; j < menu.length; j++) {
-                          menu[j].classList.toggle('hidden');
-                      }
-                  });
-              }
-          }
-
-          // close
-          const close = document.querySelectorAll('.navbar-close');
-          const backdrop = document.querySelectorAll('.navbar-backdrop');
-
-          if (close.length) {
-              for (var i = 0; i < close.length; i++) {
-                  close[i].addEventListener('click', function() {
-                      for (var j = 0; j < menu.length; j++) {
-                          menu[j].classList.toggle('hidden');
-                      }
-                  });
-              }
-          }
-
-          if (backdrop.length) {
-              for (var i = 0; i < backdrop.length; i++) {
-                  backdrop[i].addEventListener('click', function() {
-                      for (var j = 0; j < menu.length; j++) {
-                          menu[j].classList.toggle('hidden');
-                      }
-                  });
-              }
-          }
-      });
-
-  </script>
   </body>
 </html>
