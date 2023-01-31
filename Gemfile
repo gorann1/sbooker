@@ -60,10 +60,13 @@ group :development do
   gem "administrate"
   gem 'administrate-field-enum'
   gem 'devise'
+  gem "font-awesome-sass", "~> 6.2.1"
+  gem 'leaflet-rails'
   gem 'letter_opener'
+  gem 'mapbox-gl-rails'
+  gem 'ransack'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-  gem 'toastr-rails'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
@@ -78,3 +81,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "pundit", "~> 2.3"

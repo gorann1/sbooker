@@ -1,7 +1,13 @@
 <div>
-  <h1 class="font-bold text-4xl">Pages#about</h1>
+  <h1 class="font-bold text-4xl text-red-600">Pages#about</h1>
   <p>Find me in app/views/pages/about.html.erb</p>
   <%=link_to "Home", root_path, :class => "text-sm text-gray-400 hover:text-gray-700", :active => "" %>
 
   <%=link_to "home", root_path %>
+      <p data-controller="hello_controller" data-action="click->hello#handleClick"></p>
+<div data-controller="hello">
+  <input type="text">
+  <button data-action="click->hello#greet">Greet</button>
+</div>
+  <p data-controller="hello" data-action="click->hello#handleClick"></p>
 </div>
