@@ -16,6 +16,7 @@ Rails.application.routes.draw do
       resources :regions
       resources :types
       resources :visibilities
+      resources :users
       resources :zones
       root to: "zones#index"
     end
@@ -24,6 +25,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get 'centers', to:'centers#index'
+  resources :centers
   get 'locations', to:'locations#index'
 
   # Defines the root path route ("/")

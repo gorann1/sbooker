@@ -63,7 +63,12 @@ Rails.application.configure do
   config.assets.quiet = true
 
   # Raises error for missing translations.
-  # config.i18n.raise_on_missing_translations = true
+  # to enable pluralization and ordinals
+=begin
+  config.rails_i18n.enabled_modules = [:pluralization, :ordinals]
+  config.i18n.available_locales = ['en-GB', :de, :it, :hr]
+  config.i18n.raise_on_missing_translations = true
+=end
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true

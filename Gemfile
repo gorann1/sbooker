@@ -34,10 +34,10 @@ gem "jbuilder"
 # gem "redis", "~> 4.0"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-# gem "kredis"
+gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
@@ -61,9 +61,11 @@ group :development do
   gem 'administrate-field-enum'
   gem 'devise'
   gem "font-awesome-sass", "~> 6.2.1"
+  gem "image_processing", ">= 1.2"
   gem 'leaflet-rails'
   gem 'letter_opener'
   gem 'mapbox-gl-rails'
+  gem 'rails-i18n', '~> 7.0.0' # For 7.0.0
   gem 'ransack'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
