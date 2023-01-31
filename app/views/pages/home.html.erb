@@ -4,10 +4,10 @@
   <% if user_signed_in? %>
     <p>Hello <%= current_user.username %> !</p>
   <p>Find me in app/views/public/index.html.erb</p>
-  <p data-controller="hello" data-action="click->hello#handleClick"></p>
   <%= link_to "Sign Out!", destroy_user_session_path, method: :delete %>
 
     </div>
   <% else %>
 <p>You are not sign-in</p>
   <% end %>
+

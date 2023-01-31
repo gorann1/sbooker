@@ -21,10 +21,15 @@ Rails.application.routes.draw do
     end
   resources :zones
   get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get 'centers', to:'centers#index'
   get 'locations', to:'locations#index'
 
   # Defines the root path route ("/")
   root "pages#home"
+
+  get '/centers/turbo_frame_form' => 'centers#turbo_frame_form', as: 'turbo_frame_form'
+  post '/centers/turbo_frame_submit' => 'centers#turbo_frame_submit', as: 'turbo_frame_submit'
+
 end

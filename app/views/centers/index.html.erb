@@ -1,11 +1,28 @@
 <div>
-  <h1 class="font-bold text-4xl">Center#center</h1>
-  <p>Find me in app/views/center.html.erb</p>
-  <ul>
-    <% @centers.each do |center| %>
-      <li>
-        <%= center.name %> <%= center.ltd %> <%= center.lng %>
-      </li>
-    <% end %>
-  </ul>
+  <h1 class="font-bold text-4xl text-purple-500">Center#center</h1>
+
+<i class="fa-solid fa-refresh fa-2xl fa-spin"></i>
+<i class="fa-solid fa-gem fa-rotate-180"></i>
+<i class="fa-solid fa-gem fa-rotate-by" style="color: green; --fa-rotate-angle: 45deg"></i>
+<i class="fa-brands fa-youtube" style="color: red;"></i>
+<i class="fa-regular fa-bell fa-beat"></i>
+
+  <%= search_form_for @q do |f| %>
+
+    # Search if the name field contains...
+    <%= f.label :name_cont %>
+    <%= f.search_field :name_cont %>
+    <%= f.search_field :address_search %>
+    <%= f.submit %>
+  <% end %>
+  <%= sort_link(@q, :name, "Name", default_order: :asc) do %>
+    <strong>Sortiraj po nazivu</strong>
+  <% end %>
+
+  <%= render 'partials/center_card' %>
+  <p style="color: green"><%= notice %></p>
+  <%= render 'partials/map' %>
+
+  <div class="map-container" data-target="map.container"></div>
+
 </div>

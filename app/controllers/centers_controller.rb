@@ -1,6 +1,8 @@
 class CentersController < ApplicationController
 
   def index
-      @centers = Center.all
+      @q = Center.ransack(params[:q])
+      @centers = @q.result(distinct: true)
+
   end
 end
