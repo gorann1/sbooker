@@ -1,6 +1,9 @@
 require "administrate/base_dashboard"
 
 class CurrentDashboard < Administrate::BaseDashboard
+  def display_resource(current)
+    current.name
+  end
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
