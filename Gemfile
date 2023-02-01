@@ -64,6 +64,7 @@ group :development do
   gem "image_processing", ">= 1.2"
   gem 'leaflet-rails'
   gem 'letter_opener'
+  gem 'mail_form', '~> 1.9'
   gem 'mapbox-gl-rails'
   gem 'rails-i18n', '~> 7.0.0' # For 7.0.0
   gem 'ransack'

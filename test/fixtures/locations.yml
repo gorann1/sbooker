@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  slug: MyString
+  type_id: 1
+  category_id: 1
+  visibility_id: 1
+  depth_id: 1
+  current_id: 1
+  ltd: 9.99
+  lng: 9.99
+
+two:
+  name: MyString
+  description: MyText
+  slug: MyString
+  type_id: 1
+  category_id: 1
+  visibility_id: 1
+  depth_id: 1
+  current_id: 1
+  ltd: 9.99
+  lng: 9.99

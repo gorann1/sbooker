@@ -13,6 +13,7 @@ Rails.application.routes.draw do
       resources :countries
       resources :currents
       resources :depths
+      resources :locations
       resources :regions
       resources :types
       resources :visibilities
@@ -22,7 +23,10 @@ Rails.application.routes.draw do
     end
   resources :zones
   get 'about', to: 'pages#about'
-  get 'contact', to: 'pages#contact'
+  resources :contacts, only: [:new, :create ]
+  get '/contact', to: 'contacts#new', as: 'contact'
+  get 'contacts/sent'
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get 'centers', to:'centers#index'
   resources :centers
